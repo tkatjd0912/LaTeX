@@ -1,0 +1,142 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{kotex}
+
+% 목차의 section과 subsection을 같은 서식으로 표시
+\setbeamerfont{section in toc}{family=\sffamily,size=\normalsize,series=\mdseries,shape=\upshape}
+\setbeamerfont{subsection in toc}{family=\sffamily,size=\small,series=\mdseries,shape=\upshape}
+\setbeamercolor{section in toc}{fg=structure.fg}
+\setbeamercolor{subsection in toc}{fg=structure.fg}
+\setbeamertemplate{section in toc}{%
+  \leavevmode
+  \leftskip=1.8em
+  \llap{\raisebox{0.1ex}{\small\textbullet}\hskip0.7em}%
+  \inserttocsection\par
+  \vspace{0.25em}%
+}
+
+\title{Chomsky(1959), A Review of B. F. Skinner's Verbal Behavior}
+\subtitle{26-2 언어습득}
+\author{언어학과 이승헌}
+\date{2026.09.14}
+
+\begin{document}
+
+% 표지
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% 목차
+\begin{frame}{Table of Contents}
+  \tableofcontents
+\end{frame}
+
+\section{자극 \textit{stimulus}}
+\subsection{Skinner의 자극 개념}
+
+\begin{frame}[t]{Skinner의 자극(\textit{stimulus}) 개념}
+    \vspace{1cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}[t]{0.48\textwidth}
+      \begin{minipage}[t][3cm][t]{\linewidth}
+        \textbf{자극}
+
+        \medskip
+        어떤 환경과 어떤 행동이 서로 법칙적으로 연관될 때,
+        \textbf{‘자극과 반응’}이라는 관계에 놓인다.
+      \end{minipage}
+    \end{column}
+
+    \begin{column}[t]{0.48\textwidth}
+      \begin{minipage}[t][3cm][t]{\linewidth}
+        \textbf{자극-반응 예시}
+
+        \medskip
+        음악을 듣고 “Mozart”라고 반응하는 것, 그림을 보고 “Dutch”라고 반응하는 것, etc. 
+      \end{minipage}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.6em}
+
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{\textwidth}
+      \textbf{법칙적인 관계}
+      \medskip
+      \\ 모든 반응은 그 물리적 대상(그림)의 또 다른 자극에 의해 통제된다고 설명. 만약, 빨간 의자를 보고 “빨강”이라고 말한다면 그 반응은 `\textbf{빨강성}'이라는 자극의 통제를 받는 것이고, “의자”라고 말한다면 대상 자체인 `\textbf{의자성}'의 통제를 받는다는 것이다.   
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{Chomsky의 비판 - (1)}
+
+\begin{frame}{Chomsky의 비판 - (1)}
+    \begin{alertblock}{\textbf{단순한 만큼 공허한 설명이다!}}
+    \medskip 속성은 필요할 때마다 얼마든지 만들어 낼 수 있기 때문.
+    \end{alertblock}
+    \bigskip
+    \begin{itemize}
+        \item 자극 속성을 찾아내기만 하면 거의 모든 반응을 설명할 수 있음.
+        \item 화자가 처한 환경 속 자극을 바탕으로 화자의 언어행동을 예측할 수 없음.
+        \item 개인이 물리적 대상의 어느 속성에 반응할지 통제할 수도 없음.
+    \end{itemize}
+\end{frame}
+
+\section{강화 \textit{reinforcement}}
+\subsection{Skinner의 강화 개념}
+
+\begin{frame}[t]{Skinner의 강화(\textit{reinforcement}) 개념}
+    \vspace{1cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}[t]{0.48\textwidth}
+      \begin{minipage}[t][3cm][t]{\linewidth}
+        \textbf{강화}
+        
+        \medskip
+        \textbf{강화} 자극이 주어지면 반응의 \textbf{강도(빈도)}가 높아진다. 
+      \end{minipage}
+    \end{column}
+
+    \begin{column}[t]{0.48\textwidth}
+      \begin{minipage}[t][3cm][t]{\linewidth}
+        \textbf{강화 예시}
+        
+        \medskip
+        막대를 누르면 먹이가 나온다는 사실을 깨달은 쥐가 막대를 더 자주 누르게 되는 것, \textbf{청자(부모)의 반응이 아동의 언어 반응을 강화하는 것}, etc. 
+      \end{minipage}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.6em}
+
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{\textwidth}
+      \textbf{아동의 언어 행위를 강화하는 요인}
+      
+      \medskip
+      \begin{itemize}
+        \item 누군가가 말을 하지 않고 조용히 들어 주는 것
+        \item 미래에 독자나 청자가 보일 것으로 기대되는 반응
+        \item 실제로 아직 일어나지 않은, 상상하거나 희망하는 결과, etc.  
+      \end{itemize} 
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{Chomsky의 비판 - (2)}
+
+\begin{frame}{Chomsky의 비판 - (2)}
+  \begin{alertblock}{\textbf{강화 자극의 개념이 지나치게 넓어진다!}}
+    \medskip
+     어떤 행동을 지속하게 한 모든 가능한 요인—만족감, 기대, 상상, 미래의 반응—을 강화라고 부를 수 있다면, \underline{강화 이론은 어떠한 행동도 설명할 수 있다.}
+    \newline
+    \\ → 강화 이론을 통해 어떤 행동이 일어나지 않을지 예측하거나, “이 경우에는 강화 이론이 틀렸다”고 반증하는 것 또한 불가능하다는 것. 따라서 Chomsky는 강화 개념이 실험실 밖에서는 설명력을 잃는다고 봄(\textit{내용이 비게 된다}).
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \centering
+  \huge 감사합니다.
+\end{frame}
+
+\end{document}
