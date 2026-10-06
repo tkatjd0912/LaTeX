@@ -1,0 +1,84 @@
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{kotex}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage[linguistics]{forest}       % Syntax Tree 패키지 
+\usepackage[a4paper, 
+            top = 2.5cm, 
+            bottom = 2.5cm, 
+            left = 2cm, 
+            right = 2cm]{geometry}     % 용지 여백 조절 패키지 
+\usepackage{fancyhdr}                  % 머리글, 바닥글 조정 패키지
+\pagestyle{fancy}
+\fancyhf{} % 기존 머리글과 바닥글 초기화
+\fancyfoot[L]{\nouppercase{\leftmark}} % 왼쪽: 현재 section 제목
+\fancyfoot[R]{\thepage}                % 오른쪽: 페이지 번호
+\renewcommand{\sectionmark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\headrulewidth}{0pt}     % 머리글 선 제거
+\renewcommand{\footrulewidth}{0.4pt}   % 바닥글 위쪽 선
+
+\setcounter{secnumdepth}{0}            % section 넘버링 제거
+\forestset{
+  terminal/.style={
+    no edge,
+    l=3ex,
+    for parent={l sep=0pt}
+  }
+}
+
+% Short form for a lexical category and its terminal.
+\forestset{
+  lex/.style={append={[#1, terminal]}},
+  simple terminals/.style={
+    delay={for tree={split option={content}{ }{content,lex}}}
+  }
+}
+
+% Reusable GPS tree block; default width is 0.48\textwidth.
+\NewDocumentEnvironment{gpstree}{O{0.48\textwidth} m +b}
+{%
+  \begin{minipage}[t]{#1}
+  \vspace{0pt}%
+  \textbf{#2}\par
+  \medskip
+  \centering
+  \makebox[\linewidth][c]{%
+    \begin{forest} simple terminals
+      #3
+    \end{forest}%
+  }
+  \end{minipage}%
+}
+{}
+
+% Metadata
+\title{2026 Fall 몽골어 1(001): \\ Mid-Term}
+\author{언어학과 이승헌}
+
+\begin{document}
+\maketitle
+\bigskip
+
+\begin{enumerate}
+  \item [\textbf{1-1.}] 한국 이름을 키릴 문자로 쓰시오.
+  \item [\textbf{1-2.}] 몽골 이름을 쓰시오. 
+  \item [\textbf{2.}] 몽골에 대한 설명 중 옳은 것을 고르시오.\footnote{정답: 유목문화(오답: 수도, 사회 체제, 인구)}
+  \item [\textbf{3.}] 몽골어에 대한 설명 중 틀린 것을 고르시오.\footnote{정답: 양/음성 혼용 불가(오답: 각목문자, 문자, 몽골 문어)}
+  \item [\textbf{4.}] 제시된 몽골어 어휘의 한국어 발음을 적으시오: od, max, yas 
+  \item [\textbf{5.}] 제시된 몽골어 어휘의 양성/음성을 판단하시오: canal, uneg, xural\footnote{정답: 양성/음성/양성}
+  \item [\textbf{6.}] 제시된 몽골어 어휘의 한국어 의미를 적으시오: ner, mergezil, barsh, moor, emegtei, ger bul, oxin, xorgogch 
+  \item [\textbf{7.}] 제시된 한국어 어휘를 몽골어로 적으시오: 명함, 동생, 사위, 아니오, 이것, 대학생
+  \item [\textbf{8.}] 제시된 한국어 문장을 몽골어로 적으시오: 안녕하세요?, 감사합니다, 괜찮습니다 
+  \item [\textbf{9.}] 제시된 몽골어 문장을 한국어로 번역하시오: daraa uuljya, saixan tanilchlaa 
+  \item [\textbf{10-1.}] 몽골어 인칭대명사 표 채우기
+  \item [\textbf{10-2.}] 몽골어 의문첨사 적기
+  \item [\textbf{11.}] 나이, 가족 관련 몽골어 표현
+  \item [\textbf{12.}] 차강 톨고이, 게르, 하닥을 몽골어로 적으시오. 
+\end{enumerate} 
+
+\end{document}
